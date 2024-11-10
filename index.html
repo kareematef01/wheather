@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <!-- ?======>   link bootstrap  <====== -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ?======>   link font-awesome  <====== -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- ?======>   main style sheet  <======= -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- ?======>   media style sheet  <======= -->
+  <link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+  <!--* start navbar-->
+  <nav class="navbar navbar-dark navbar-expand-lg  shadow bg-primary py-3 ">
+    <div class="container px-5">
+      <div class="d-flex align-items-center logo">
+        <i class="fa-solid fa-cloud-bolt"></i>
+        <div class="content d-flex align-items-start flex-column text-white ms-2">
+          <h1 class="navbar-brand m-0 p-0 fw-semibold" href="#">Weather</h1>
+          <small class="">
+            tagline goes here
+          </small>
+        </div>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link ms-4 mb-2 mb-lg-0 active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item ms-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item ms-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="#">Live cameras</a>
+          </li>
+          <li class="nav-item ms-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="#">Photos</a>
+          </li>
+          <li class="nav-item ms-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--* end navbar -->
+
+
+  <!--* start weather section -->
+  <section id="wheather" class="">
+
+    <div class="container pb-4 px-4 px-lg-5">
+      <div class="search input-group mb-3 w-75 m-auto position-relative ">
+        <input type="text" class="form-control rounded-5 py-3 z-0 " placeholder="find your location.." id="userLocation"
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-primary  text-white position-absolute top-50 z-1 rounded-5 px-4 px-lg-5 py-2"
+          type="button" id="btnFind">find</button>
+      </div>
+      <div class="row pt-4 px-md-5">
+        <!--? first day-->
+        <div class="col-lg-4 col-md-12 card1  rounded-start-4">
+          <div class="  text-start px-2 py-2">
+            <div class=" d-flex align-items-center justify-content-between mb-3">
+              <h2 class="day-name h6 " id="todayName"></h2>
+              <div class="d-flex gap-1">
+                <span id="todayNumber"></span>
+                <p id="todayMonth"></p>
+              </div>
+            </div>
+            <h3 id="todayLocation" class="h1 fw-semibold "></h3>
+            <div class="weather-icon mb-2  d-flex align-items-center justify-content-between">
+              <span class="temperature" id="todayTemperature"></span>
+              <img src="" class="w-25 ms-2" id="todayImg">
+            </div>
+            <div class="description mb-4" id="todayDescription"></div>
+            <div class="windDetails d-flex align-items-center justify-content-between">
+              <div class="humidity my-2 text-black text-opacity-50">
+                <img class="" src="images/icon-umberella.png" alt="">
+                <span id="humidity">%</span>
+              </div>
+              <div class="winds  text-black text-opacity-50">
+                <img src="images/icon-wind.png" alt="">
+                <span id="winds"> km/h</span>
+              </div>
+              <div class="weatherTrend  text-black text-opacity-50">
+                <img src="images/icon-compass.png" alt="">
+                <span id="windDir"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--? second day-->
+        <div class="col-lg-4 col-md-6 card2 weather-card">
+          <div class="  text-center px-2 py-2">
+            <div class=" d-flex align-items-center justify-content-between">
+              <h2 class="day-name h6 nextdayName"></h2>
+              <div class="d-flex gap-1">
+                <span class="nextDayNumber"></span>
+                <p class="nextDayMonth"></p>
+              </div>
+            </div>
+            <div class="weather-icon mt-2 ">
+              <img class="w-25 tImg" src="" id="tomorrowImage"></img>
+            </div>
+            <span class="temperature maxTemp" id="tomorrowTemperature"></span> <br>
+            <span class="minTemp d-inline-block mb-3 fs-4"></span>
+            <div class="description des" id="tomorrowDescription"> </div>
+          </div>
+        </div>
+        <!--? third day-->
+        <div class="col-lg-4 col-md-6 card3 weather-card rounded-end-4">
+          <div class="  text-center px-2 py-2">
+            <div class=" d-flex align-items-center justify-content-between">
+              <h2 class="day-name h6 nextdayName"></h2>
+              <div class="d-flex gap-1">
+                <span class="nextDayNumber"></span>
+                <p class="nextDayMonth"></p>
+              </div>
+            </div>
+            <div class="weather-icon mt-2 ">
+              <img src="" class="w-25 tImg" id="nextTomorrowImage">
+            </div>
+            <span class="temperature maxTemp" id="nextTomorrowTemperature"></span> <br>
+            <span class="minTemp d-inline-block mb-3 fs-4"></span>
+            <div class="description des" id="nextTomorrowDescription"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--* end weather section -->
+
+  <!--! link javascript-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

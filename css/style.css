@@ -1,0 +1,95 @@
+/* *base style */
+
+body {
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+}
+
+/* *start navbar style */
+
+.navbar .content small {
+  font-size: .75rem;
+}
+
+.navbar .content h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  letter-spacing: 0.7px;
+}
+
+.navbar i {
+  color: #c3edff;
+  font-size: 50px;
+}
+
+.nav-link {
+  color: #fff;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  position: relative;
+  border: solid transparent 2px;
+  border-radius: 100vh;
+  transition: ease 0.3s;
+  padding-block: .1875rem;
+  padding-inline: .25rem;
+}
+
+.nav-link:hover {
+  color: #fff;
+  border-color: #C4D7FF;
+}
+
+.nav-link.active {
+  border-color: #C4D7FF;
+  font-weight: bold;
+}
+
+.navbar .logo {
+  cursor: pointer;
+}
+
+/* *start wheather style */
+
+#wheather {
+  padding-top: 6.25rem;
+  padding-bottom: 80px;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#btnFind {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.card1 {
+  background-color: rgb(255, 255, 255 );
+}
+
+.card2{
+  background-color: rgb(211, 237, 255 );
+}
+.card3{
+  background-color: rgb(255, 255, 255 );
+}
+.weather-icon {
+  font-size: 45px;
+}
+
+.day-name {
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 45px;
+  color: #ff6347;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+}
