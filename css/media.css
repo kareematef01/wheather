@@ -1,32 +1,48 @@
+/* *wheather media */
 @media (max-width: 992px) {
 
- .card1{
-    border-top-left-radius: 15px !important;
-    border-top-right-radius: 15px !important;
-    border-bottom-left-radius: 0px !important;
- }
+   .card1 {
+      border-top-left-radius: 15px !important;
+      border-top-right-radius: 15px !important;
+      border-bottom-left-radius: 0px !important;
+   }
 
- .card3{
-    border-top-right-radius: 0px !important;
-    
+   .card3 {
+      border-top-right-radius: 0px !important;
 
- }
- .card2{
-    border-bottom-left-radius:15px ;
- }
+
+   }
+
+   .card2 {
+      border-bottom-left-radius: 15px;
+   }
 }
 
 @media (max-width: 768px) {
 
-    .card2{
-        border-bottom-left-radius:0px ;
-     }
-
-    .card3{
-        border-bottom-left-radius:15px ;
-       
-    }
-    .search{
-      width: 100% !important;
-    }
+   .card2 {
+      border-bottom-left-radius: 0px;
    }
+
+   .card3 {
+      border-bottom-left-radius: 15px;
+
+   }
+
+   .search {
+      width: 100% !important;
+   }
+}
+
+/* *navbar media */
+@media (max-width: 768px) {
+   
+   .navbar-nav {
+      margin-top: .9375rem;
+   }
+
+   .nav-link {
+      padding-block: .1875rem;
+      padding-inline: 8px;
+   }
+}
