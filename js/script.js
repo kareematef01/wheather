@@ -28,13 +28,20 @@ if (navigator.geolocation) {
         startApp(`${latitude},${longitude}`)
     });
 } else {
-    
+
     window.alert("Geolocation is not supported by this browser.");
-    
+
 }
+
 startApp()
 
+btnFind.addEventListener("click", function () {
+    startApp(userLocation.value);
+})
 
+userLocation.addEventListener("input", function () {
+    startApp(userLocation.value);
+})
 
 
 
@@ -51,7 +58,7 @@ async function startApp(city = "london") {
     if (!wheatherData.error) {
         displayTodayWheather(wheatherData)
         displaytommorow(wheatherData)
-    } 
+    }
 
 }
 
@@ -62,7 +69,7 @@ function displayTodayWheather(data) {
     todayNumber.innerHTML = tDate.getDate()
     todayLocation.innerHTML = data.location.name;
     todayTemperature.innerHTML = data.current.temp_c + "°C"
-    todayImg.setAttribute('src', "https:"+data.current.condition.icon)
+    todayImg.setAttribute('src', "https:" + data.current.condition.icon)
     todayDescription.innerHTML = data.current.condition.text
     humidity.innerHTML = data.current.humidity + "%"
     winds.innerHTML = data.current.wind_kph + "km/h"
@@ -80,18 +87,12 @@ function displaytommorow(data) {
         tomorrowMaxTemperature[i].innerHTML = tommorwData[i + 1].day.maxtemp_c + "°C"
         tomorrowMinTemperature[i].innerHTML = tommorwData[i + 1].day.mintemp_c + "°C"
         tomorrowDescription[i].innerHTML = tommorwData[i + 1].day.condition.text
-        tomorrowImage[i].setAttribute("src", "https:"+tommorwData[i + 1].day.condition.icon)
+        tomorrowImage[i].setAttribute("src", "https:" + tommorwData[i + 1].day.condition.icon)
 
     }
 }
 
 
 
-btnFind.addEventListener("click", function () {
-    startApp(userLocation.value);
-})
 
-userLocation.addEventListener("input", function () {
-    startApp(userLocation.value);
-})
 
